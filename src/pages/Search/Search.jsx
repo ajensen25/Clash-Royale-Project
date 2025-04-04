@@ -1,8 +1,16 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Search.css";
 
 function Search() {
+  // import.meta.env.API_KEY
+  const URL = "https://api.clashroyale.com/v1/cards";
+
   const cardInput = useRef(null);
+
+  const getCards = async () => {
+    try {
+    } catch (err) {}
+  };
 
   return (
     <>
