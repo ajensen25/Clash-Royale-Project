@@ -1,0 +1,52 @@
+.home {
+  background: url("../../assets/background.png");
+  background-repeat: no-repeat;
+  padding: 3rem 1rem 1rem 1rem;
+  height: calc(100vh - 72px);
+  overflow: hidden;
+  width: 100vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home h1 {
+  font-size: 3.3rem;
+  text-align: center;
+}
+
+.home p {
+  text-align: center;
+  max-width: 30rem;
+}
+
+.home p b.red {
+  color: red;
+  font-weight: 500;
+}
+
+.home button {
+  border: 1px solid white;
+  border-radius: 100rem;
+  font-size: 1rem;
+  background: red;
+  padding: 0.5rem 2rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.home button:hover {
+  background: white;
+  color: black;
+}
+
+.home .cards-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+  overflow: scroll;
+}

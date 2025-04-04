@@ -1,0 +1,61 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.navbar-link b {
+  color: red;
+  font-weight: 400;
+}
+
+.navbar-link.hover-animation::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0;
+  background: black;
+  top: 25px;
+  right: 0;
+  left: 0;
+  transition: width 0.2s ease;
+}
+
+.navbar-link.hover-animation:hover::after {
+  width: 100%;
+}
+
+header .header-left .navbar-link {
+  font-size: 1.3rem;
+}
+
+header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-right button {
+  border: 1px solid black;
+  border-radius: 100rem;
+  background: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.header-right button:hover {
+  background: black;
+  color: white;
+}
