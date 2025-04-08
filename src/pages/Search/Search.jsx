@@ -2,15 +2,28 @@ import { useEffect, useRef } from "react";
 import "./Search.css";
 
 function Search() {
-  // import.meta.env.API_KEY
   const URL = "https://api.clashroyale.com/v1/cards";
 
   const cardInput = useRef(null);
 
   const getCards = async () => {
     try {
-    } catch (err) {}
+      const res = await fetch(URL, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_APP_ID}`,
+        },
+      });
+
+      const cardData = await res.json();
+    } catch (err) {
+      console.error("Failed to access API", err);
+    }
   };
+
+  useEffect(() => {
+    getCards();
+  }, []);
 
   return (
     <>
